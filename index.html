@@ -1,0 +1,81 @@
+
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<style>
+    body {
+        background-color: lightblue;
+        font-family: "Press Start 2P", system-ui;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+    }
+</style>
+<title>Acen's Resume</title>
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"> 
+</head>
+
+
+<div class="fixed inset-0 flex items-center justify-center z-15" id="modal">
+    <div class="bg-white mx-w-md p-11 text-center rounded-md">
+        <h1 class="text-3xl font-bold">Welcome!</h1>
+        <p class="text-sm gray-700 mt-5">My name is Acen Hite and <br> this is my playable resume!</p>
+        <div><button class="mt-7 bg-blue-400 text-white py-4 w-full rounded-full z-20" id="startGame">Play my Resume</button></div>
+        <div>
+            <a href='./resume.pdf' download><button class="mt-4 bg-red-400 text-white py-4 w-full rounded-full z-20" >Download my Resume</button></a>
+        </div>
+    </div>
+</div>
+
+
+<div class="fixed text-xs text-center w-35 mb-120 mr-210 bg-red-400 text-white py-3 rounded-md opacity-80 z-10">
+    <a href="./resume.pdf" download>Download Resume</a>
+</div>
+<div class="fixed text-xs text-center w-35 mb-120 mr-135 bg-blue-400 text-white py-3 rounded-md opacity-80 z-10">
+    <a href="">View Portfolio</a>
+</div>
+<div class="fixed text-xs text-center w-35 mb-120 mr-60 bg-red-400 text-white py-3 rounded-md opacity-80 z-10">
+    <a href="mailto:acenhite11@gmail.com">Get in Contact</a>
+</div>
+
+<div class="fixed text-xs text-center w-45 mb-120 ml-200 bg-blue-400 text-white py-3 rounded-md opacity-80">
+    <span>AD to move</span><br>
+    <span>W to jump</span><br>
+    <span>E to interact</span>
+</div>
+
+<div class="fixed inset-0 flex items-center justify-center opacity-0" id="textBox">
+    <div class="mt-80 bg-white w-180 p-6 text-center rounded-md">
+        hi c:
+    </div>
+</div>
+
+<div class="fixed text-xs text-center w-90 mt-125 mr-155 bg-blue-400 text-white py-3 rounded-md opacity-80">Your Task: Talk to everyone!</div>
+<div class="fixed text-xs text-center w-90 mt-125 ml-155 bg-red-400 text-white py-3 rounded-md opacity-80">
+    <span>You've Spoken To: </span>
+    <span id="numNPC">0</span>
+    <span>/ 6 NPCs</span>
+</div>
+
+<div class="fixed bg-white w-230 p-5 mt-70 opacity-80 rounded-md invisible" id="dialogueBox">Hello!</div>
+
+<canvas></canvas>
+
+<script 
+    src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js" 
+    integrity="sha512-Mf/xUqfWvDIr+1B6zfnIDIiG7XHzyP/guXUWgV6PgaQoIFeXkJQR5XWh9fqAiCiRCpemabt3naV4jhDWVnuYDQ==" 
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer"
+></script>
+
+<script src="js/utils.js"></script>
+<script src="js/data/collisions.js"></script>
+<script src="js/classes/CollisionBlock.js"></script>
+<script src="js/classes/Sprite.js"></script>
+<script src="js/classes/Object.js"></script>
+<script src="js/classes/Npc.js"></script>
+<script src="js/classes/Player.js"></script>
+<script src="js/eventListeners.js"></script>
+<script src="index.js"></script>
